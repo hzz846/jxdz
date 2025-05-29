@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>江西单招信息查询系统 - 登录访问</title>
+    <title>江西2025新高考专科最低批投档线信息查询系统 - 登录访问</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { 
@@ -471,6 +471,33 @@
             font-size: 14px;
         }
         
+        .logout-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 2000;
+        }
+        
+        .logout-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
         @media (min-width: 768px) {
             .schools-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -513,10 +540,22 @@
             .login-title {
                 font-size: 22px;
             }
+            
+            .logout-container {
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- 登出按钮 -->
+    <div class="logout-container" id="logoutContainer" style="display: none;">
+        <button class="logout-btn" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> 退出系统
+        </button>
+    </div>
+    
     <!-- 登录层 -->
     <div class="login-overlay" id="loginOverlay">
         <div class="login-container">
@@ -654,6 +693,28 @@
             const loginOverlay = document.getElementById('loginOverlay');
             const contentContainer = document.getElementById('contentContainer');
             const errorMessage = document.getElementById('errorMessage');
+            const logoutBtn = document.getElementById('logoutBtn');
+            const logoutContainer = document.getElementById('logoutContainer');
+            
+            // 检查sessionStorage中的登录状态
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+            
+            if (isLoggedIn === 'true') {
+                // 用户已登录，直接显示内容
+                loginOverlay.style.display = 'none';
+                contentContainer.style.display = 'block';
+                contentContainer.style.opacity = '1';
+                contentContainer.style.transform = 'translateY(0)';
+                logoutContainer.style.display = 'block';
+                
+                // 初始化数据
+                addHighlightAnimation();
+                initCardData();
+                setupSearch();
+            } else {
+                // 显示登录层
+                loginOverlay.style.display = 'flex';
+            }
             
             // 预设的登录凭证
             const validUsername = "admin";
@@ -667,11 +728,15 @@
                 
                 if (username === validUsername && password === validPassword) {
                     // 登录成功
+                    sessionStorage.setItem('isLoggedIn', 'true');
+                    
                     loginOverlay.style.opacity = '0';
                     loginOverlay.style.pointerEvents = 'none';
                     
                     setTimeout(() => {
+                        loginOverlay.style.display = 'none';
                         contentContainer.style.display = 'block';
+                        logoutContainer.style.display = 'block';
                         setTimeout(() => {
                             contentContainer.style.opacity = '1';
                             contentContainer.style.transform = 'translateY(0)';
@@ -694,6 +759,12 @@
                         loginForm.style.animation = '';
                     }, 500);
                 }
+            });
+            
+            // 退出登录功能
+            logoutBtn.addEventListener('click', function() {
+                sessionStorage.removeItem('isLoggedIn');
+                window.location.reload();
             });
             
             // 添加抖动动画
