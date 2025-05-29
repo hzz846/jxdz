@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024江西新高考专科最低批投档线</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #1a3a8f, #0c1a4d);
+            color: #333;
+            padding: 15px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        
+        .header {
+            background: #0c1a4d;
+            padding: 20px 15px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+        
+        .logo {
+            height: 46px;
+            margin-right: 12px;
+            background: #f0f7ff;
+            border-radius: 50%;
+            padding: 7px;
+            box-shadow: 0 0 8px rgba(255,255,255,0.3);
+        }
+        
+        .logo-text {
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: white;
+            font-size: clamp(18px, 4vw, 26px);
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            color: #a0c8ff;
+            font-size: clamp(13px, 3vw, 15px);
+            margin-bottom: 12px;
+        }
+        
+        .badge {
+            background: #ff6b00;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 13px;
+            margin-top: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+        
+        .search-container {
+            padding: 12px 15px;
+            background: #f0f7ff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            gap: 8px;
+        }
+        
+        .search-box {
+            flex: 1;
+            padding: 10px 12px 10px 42px;
+            border: 2px solid #a0c8ff;
+            border-radius: 30px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%233498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>') no-repeat 14px center;
+            background-size: 18px;
+        }
+        
+        .search-box:focus {
+            border-color: #1a3a8f;
+            box-shadow: 0 2px 12px rgba(26, 58, 143, 0.3);
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 12px 0;
+            padding: 0 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            padding: 5px 10px;
+            background: #f8fbff;
+            border-radius: 20px;
+        }
+        
+        .color-box {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            margin-right: 5px;
+            flex-shrink: 0;
+        }
+        
+        .history-color { background: #e74c3c; }
+        .physics-color { background: #3498db; }
+        .vocational-color { background: #2ecc71; }
+        
+        .tier-section {
+            margin: 15px 0;
+            padding: 0 10px;
+        }
+        
+        .tier-title {
+            background: linear-gradient(to right, #e6f0ff, #c2d9ff);
+            padding: 10px 12px;
+            border-left: 5px solid #1a3a8f;
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: clamp(15px, 3vw, 18px);
+            color: #0c1a4d;
+            border-radius: 0 8px 8px 0;
+            position: sticky;
+            top: 60px;
+            z-index: 50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .tier-count {
+            font-size: 13px;
+            background: #0c1a4d;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+        
+        .schools-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        .school-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            border-left: 4px solid #1a3a8f;
+            transition: all 0.3s ease;
+        }
+        
+        .school-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .school-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .school-name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #0c1a4d;
+        }
+        
+        .school-type {
+            font-size: 12px;
+            background: #e6f0ff;
+            color: #1a3a8f;
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+        
+        .school-data {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+            border-radius: 8px;
+            background: #f8fbff;
+        }
+        
+        .data-label {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        .data-value {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .history { color: #e74c3c; }
+        .physics { color: #3498db; }
+        .vocational { color: #2ecc71; }
+        
+        .school-note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #7f8c8d;
+            padding-top: 8px;
+            border-top: 1px dashed #eaeaea;
+        }
+        
+        .no-admission {
+            opacity: 0.6;
+            position: relative;
+        }
+        
+        .no-admission::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e74c3c;
+            transform: translateY(-50%);
+        }
+        
+        .note {
+            background: #fff8e6;
+            border-left: 4px solid #ffb142;
+            padding: 12px;
+            margin: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .note strong {
+            color: #e74c3c;
+        }
+        
+        .footer {
+            background: #0c1a4d;
+            color: #a0c8ff;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 15px;
+            display: none;
+        }
+        
+        .result-count {
+            text-align: center;
+            padding: 8px 0;
+            color: #1a3a8f;
+            font-weight: bold;
+            display: none;
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .schools-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .school-card {
+                padding: 18px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .search-container {
+                padding: 15px 20px;
+            }
+            
+            .legend {
+                gap: 15px;
+                margin: 15px 0;
+            }
+            
+            .tier-title {
+                top: 70px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .schools-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1a3a8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <div class="logo-text">江西升学规划</div>
+            </div>
+            
+            <h1>2024江西新高考专科最低批投档线</h1>
+            <div class="subtitle">历史组分数｜物理组排名｜三校生分数</div>
+            <div class="badge">2025江西高考志愿规划一对一预约中（限前50名）</div>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="搜索院校名称..." id="searchInput">
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="color-box history-color"></div>
+                <span>历史组分数</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box physics-color"></div>
+                <span>物理组排名</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box vocational-color"></div>
+                <span>三校生分数</span>
+            </div>
+        </div>
+        
+        <div class="result-count" id="resultCount">找到 <span id="matchCount">0</span> 所匹配院校</div>
+        <div class="no-results" id="noResults">
+            <i class="fas fa-search" style="font-size: 24px; margin-bottom: 10px;"></i>
+            <p>没有找到匹配的院校，请尝试其他关键词</p>
+        </div>
+        
+        <div class="tier-section" id="tier1">
+            <div class="tier-title">
+                <span>第一梯队公办院校</span>
+                <div class="tier-count">28所</div>
+            </div>
+            <div class="schools-container" id="tier1Data">
+                <!-- 卡片数据将通过JS动态加载 -->
+            </div>
+        </div>
+        
+        <div class="tier-section" id="tier2">
+            <div class="tier-title">
+                <span>第二梯队公办院校</span>
+                <div class="tier-count">25所</div>
+            </div>
+            <div class="schools-container" id="tier2Data">
+                <!-- 卡片数据将通过JS动态加载 -->
+            </div>
+        </div>
+        
+        <div class="tier-section" id="tier3">
+            <div class="tier-title">
+                <span>第三梯队院校（民办为主）</span>
+                <div class="tier-count">26所</div>
+            </div>
+            <div class="schools-container" id="tier3Data">
+                <!-- 卡片数据将通过JS动态加载 -->
+            </div>
+        </div>
+        
+        <div class="note">
+            <strong>数据说明：</strong><br>
+            1. 物理组数据为"最低投档排名"（非分数），历史组/三校生为"最低投档分数"<br>
+            2. 标注<span style="text-decoration:line-through">删除线</span>院校2025年停止招生<br>
+            3. 本科批次院校含少量专科专业招生<br>
+            4. 2025年招生计划以江西省教育考试院最新通知为准
+        </div>
+        
+        <div class="footer">
+            数据来源：江西省教育考试院 | 版权所有：江西升学规划<br>
+            红色数字-历史组 | 蓝色数字-物理组 | 绿色数字-三校生<br>
+            2025江西高考志愿规划一对一预约：仅限前50名
+        </div>
+    </div>
+
+    <script>
+        // 院校数据
+        const schoolData = {
+            tier1: [
+                { name: "江西警察学院", history: "447", physics: "424", vocational: "-", note: "大专批次" },
+                { name: "江西师范高等专科学校", history: "418", physics: "376", vocational: "314", note: "" },
+                { name: "萍乡学院", history: "463", physics: "442", vocational: "-", note: "大专批次" },
+                { name: "赣南卫生健康职业学院", history: "417", physics: "393", vocational: "430", note: "" },
+                { name: "景德镇学院", history: "463", physics: "439", vocational: "-", note: "少量大专批次" },
+                { name: "江西交通职业技术学院", history: "410", physics: "402", vocational: "425", note: "" },
+                { name: "华东交通大学", history: "-", physics: "-", vocational: "-", note: "取消大专批次招生", noAdmission: true },
+                { name: "江西现代职业技术学院", history: "408", physics: "397", vocational: "398", note: "" },
+                { name: "江西职业技术大学", history: "445", physics: "428", vocational: "489", note: "" },
+                { name: "萍乡卫生职业学院", history: "406", physics: "369", vocational: "442", note: "" },
+                { name: "九江职业大学", history: "440", physics: "425", vocational: "466", note: "" },
+                { name: "江西司法警官职业学院", history: "401", physics: "374", vocational: "441", note: "" },
+                { name: "江西应用技术职业学院", history: "431", physics: "426", vocational: "-", note: "" },
+                { name: "江西工业贸易职业技术学院", history: "392", physics: "388", vocational: "338", note: "" },
+                { name: "江西中医药高等专科学校", history: "431", physics: "405", vocational: "-", note: "" },
+                { name: "抚州幼儿师范高等专科学校", history: "392", physics: "344", vocational: "299", note: "" },
+                { name: "江西医学高等专科学校", history: "424", physics: "399", vocational: "-", note: "" },
+                { name: "江西生物科技职业技术学院", history: "371", physics: "377", vocational: "404", note: "" },
+                { name: "江西外语外贸职业技术学院", history: "432", physics: "425", vocational: "439", note: "" },
+                { name: "宜春幼儿师范高等专科学校", history: "290", physics: "364", vocational: "-", note: "" },
+                { name: "江西电力职业技术学院", history: "428", physics: "426", vocational: "478", note: "" },
+                { name: "江西环境工程职业学院", history: "381", physics: "382", vocational: "357", note: "" },
+                { name: "江西财经职业学院", history: "425", physics: "413", vocational: "390", note: "" },
+                { name: "上饶幼儿师范高等专科学校", history: "379", physics: "328", vocational: "309", note: "" },
+                { name: "赣州师范高等专科学校", history: "433", physics: "382", vocational: "-", note: "" },
+                { name: "鹰潭职业技术学院", history: "370", physics: "346", vocational: "307", note: "" },
+                { name: "宜春职业技术学院", history: "418", physics: "393", vocational: "464", note: "" },
+                { name: "江西工业职业技术学院", history: "364", physics: "357", vocational: "354", note: "" }
+            ],
+            tier2: [
+                { name: "江西旅游商贸职业学院", history: "386", physics: "369", vocational: "336", note: "" },
+                { name: "江西农业工程职业学院", history: "357", physics: "320", vocational: "349", note: "" },
+                { name: "南昌健康职业技术学院", history: "388", physics: "350", vocational: "-", note: "" },
+                { name: "江西工业工程职业学院", history: "345", physics: "330", vocational: "309", note: "" },
+                { name: "江西信息应用职业技术学院", history: "363", physics: "375", vocational: "321", note: "" },
+                { name: "江西传媒职业学院", history: "343", physics: "303", vocational: "314", note: "" },
+                { name: "江西制造职业技术学院", history: "366", physics: "356", vocational: "387", note: "" },
+                { name: "赣州职业技术学院", history: "342", physics: "319", vocational: "298", note: "" },
+                { name: "上饶卫生健康职业学院", history: "366", physics: "327", vocational: "-", note: "" },
+                { name: "江西陶瓷工艺美术职业技术学院", history: "341", physics: "317", vocational: "323", note: "" },
+                { name: "江西水利职业学院", history: "364", physics: "360", vocational: "351", note: "" },
+                { name: "抚州职业技术学院", history: "341", physics: "324", vocational: "295", note: "" },
+                { name: "吉安职业技术学院", history: "362", physics: "327", vocational: "349", note: "" },
+                { name: "江西应用工程职业学院", history: "339", physics: "321", vocational: "298", note: "" },
+                { name: "江西机电职业技术学院", history: "358", physics: "363", vocational: "346", note: "" },
+                { name: "上饶职业技术学院", history: "335", physics: "318", vocational: "296", note: "" },
+                { name: "江西飞行学院", history: "-", physics: "-", vocational: "-", note: "取消大专批次招生", noAdmission: true },
+                { name: "江西冶金职业技术学院", history: "335", physics: "317", vocational: "290", note: "" },
+                { name: "江西工程职业学院", history: "355", physics: "334", vocational: "303", note: "" },
+                { name: "江西婺源茶叶职业学院", history: "335", physics: "313", vocational: "299", note: "" },
+                { name: "江西建设职业技术学院", history: "352", physics: "293", vocational: "327", note: "" },
+                { name: "江西管理职业学院", history: "335", physics: "314", vocational: "288", note: "" },
+                { name: "江西艺术职业学院", history: "351", physics: "330", vocational: "-", note: "" },
+                { name: "吉安幼儿师范高等专科学校", history: "335", physics: "314", vocational: "319", note: "" },
+                { name: "江西青年职业学院", history: "348", physics: "335", vocational: "302", note: "" },
+                { name: "九江卫生健康职业学院", history: "-", physics: "-", vocational: "-", note: "公办" },
+                { name: "江西电子信息职业技术学院", history: "-", physics: "-", vocational: "-", note: "公办" }
+            ],
+            tier3: [
+                { name: "南昌大学共青学院", history: "329", physics: "299", vocational: "-", note: "民办" },
+                { name: "南昌影视传播职业学院", history: "330", physics: "305", vocational: "289", note: "民办" },
+                { name: "南昌交通学院", history: "328", physics: "316", vocational: "-", note: "民办" },
+                { name: "江西樟树中医药职业学院", history: "320", physics: "271", vocational: "282", note: "民办" },
+                { name: "南昌职业大学", history: "325", physics: "289", vocational: "280", note: "民办" },
+                { name: "九江理工职业学院", history: "310", physics: "290", vocational: "281", note: "民办" },
+                { name: "江西工程学院", history: "323", physics: "355", vocational: "-", note: "民办" },
+                { name: "赣西科技职业学院", history: "308", physics: "285", vocational: "280", note: "民办" },
+                { name: "江西应用科技学院", history: "317", physics: "326", vocational: "301", note: "民办" },
+                { name: "景德镇陶瓷职业技术学院", history: "299", physics: "255", vocational: "275", note: "民办" },
+                { name: "景德镇艺术职业大学", history: "316", physics: "264", vocational: "-", note: "民办" },
+                { name: "江西科技职业学院", history: "294", physics: "249", vocational: "273", note: "民办" },
+                { name: "南昌理工学院", history: "308", physics: "291", vocational: "292", note: "民办" },
+                { name: "江西洪州职业学院", history: "292", physics: "240", vocational: "-", note: "民办" },
+                { name: "南昌应用技术师范学院", history: "304", physics: "250", vocational: "-", note: "民办" },
+                { name: "共青科技职业学院", history: "289", physics: "240", vocational: "270", note: "民办" },
+                { name: "江西科技学院", history: "299", physics: "264", vocational: "270", note: "民办" },
+                { name: "江西航空职业技术学院", history: "285", physics: "240", vocational: "270", note: "民办" },
+                { name: "南昌工学院", history: "291", physics: "240", vocational: "286", note: "民办" },
+                { name: "江西泰豪动漫职业学院", history: "283", physics: "240", vocational: "270", note: "民办" },
+                { name: "江西软件职业技术大学", history: "277", physics: "240", vocational: "270", note: "民办" },
+                { name: "赣东职业技术学院", history: "282", physics: "240", vocational: "270", note: "民办" },
+                { name: "江西新能源科技职业学院", history: "330", physics: "304", vocational: "276", note: "民办" },
+                { name: "江西枫林涉外经贸职业学院", history: "284", physics: "240", vocational: "270", note: "民办" },
+                { name: "江西工商职业技术学院", history: "320", physics: "270", vocational: "279", note: "民办" },
+                { name: "和君职业学院", history: "277", physics: "240", vocational: "270", note: "民办" }
+            ]
+        };
+
+        // 初始化卡片数据
+        function initCardData() {
+            renderCards('tier1Data', schoolData.tier1);
+            renderCards('tier2Data', schoolData.tier2);
+            renderCards('tier3Data', schoolData.tier3);
+        }
+
+        // 渲染卡片数据
+        function renderCards(containerId, data) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            
+            data.forEach(school => {
+                const card = document.createElement('div');
+                card.className = 'school-card';
+                
+                if (school.noAdmission) {
+                    card.classList.add('no-admission');
+                }
+                
+                card.innerHTML = `
+                    <div class="school-header">
+                        <div class="school-name">${school.name}</div>
+                        <div class="school-type">${school.note}</div>
+                    </div>
+                    <div class="school-data">
+                        <div class="data-item">
+                            <div class="data-label">历史组</div>
+                            <div class="data-value history">${school.history}</div>
+                        </div>
+                        <div class="data-item">
+                            <div class="data-label">物理组</div>
+                            <div class="data-value physics">${school.physics}</div>
+                        </div>
+                        <div class="data-item">
+                            <div class="data-label">三校生</div>
+                            <div class="data-value vocational">${school.vocational}</div>
+                        </div>
+                        <div class="data-item">
+                            <div class="data-label">状态</div>
+                            <div class="data-value">${school.noAdmission ? '停止招生' : '正常招生'}</div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // 搜索功能
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const noResults = document.getElementById('noResults');
+            const resultCount = document.getElementById('resultCount');
+            const matchCount = document.getElementById('matchCount');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.trim().toLowerCase();
+                let totalMatches = 0;
+                
+                if (searchTerm === '') {
+                    // 清空搜索，显示所有数据
+                    initCardData();
+                    noResults.style.display = 'none';
+                    resultCount.style.display = 'none';
+                    return;
+                }
+                
+                // 搜索每个梯队
+                ['tier1', 'tier2', 'tier3'].forEach(tier => {
+                    const filteredData = schoolData[tier].filter(school => 
+                        school.name.toLowerCase().includes(searchTerm)
+                    );
+                    
+                    if (filteredData.length > 0) {
+                        totalMatches += filteredData.length;
+                        renderCards(`${tier}Data`, filteredData);
+                        
+                        // 高亮匹配的卡片
+                        const container = document.getElementById(`${tier}Data`);
+                        const cards = container.querySelectorAll('.school-card');
+                        for (let card of cards) {
+                            const schoolName = card.querySelector('.school-name').textContent.toLowerCase();
+                            if (schoolName.includes(searchTerm)) {
+                                card.style.animation = "highlight 1s ease";
+                                
+                                // 移除动画以便下次使用
+                                setTimeout(() => {
+                                    card.style.animation = "";
+                                }, 1000);
+                            }
+                        }
+                    } else {
+                        // 清空该梯队的容器
+                        document.getElementById(`${tier}Data`).innerHTML = '';
+                    }
+                });
+                
+                if (totalMatches > 0) {
+                    noResults.style.display = 'none';
+                    resultCount.style.display = 'block';
+                    matchCount.textContent = totalMatches;
+                } else {
+                    noResults.style.display = 'block';
+                    resultCount.style.display = 'none';
+                }
+            });
+        }
+
+        // 添加高亮动画
+        function addHighlightAnimation() {
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes highlight {
+                    0% { transform: scale(1.02); box-shadow: 0 0 15px rgba(255, 215, 0, 0.8); }
+                    50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(255, 215, 0, 0.9); }
+                    100% { transform: scale(1); box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            addHighlightAnimation();
+            initCardData();
+            setupSearch();
+        });
+    </script>
+</body>
+</html>
